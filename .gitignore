@@ -10,7 +10,7 @@
 /public/uploads/
 /public/Documents/
 /var/
-#/vendor/
+/vendor/
 qodana.yaml
 ###< symfony/framework-bundle ###
 
