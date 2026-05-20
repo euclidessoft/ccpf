@@ -4,613 +4,527 @@
 
 {% block body %}
 
-    <!-- Hero Carousel -->
-    <section id="accueil" class="hero-section">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-{#                    <img src="{{ asset('images/slide1.avif') }}" class="d-block w-100 h-100" style="object-fit: cover;" alt="Nettoyage professionnel">#}
-                    <div class="carousel-image slide_1"></div>
-                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center animate-fadeInUp">
-                        <h1 class="display-3 fw-bold text-white mb-4 text-center">
-                            Nettoyage Professionnel <br> & Entretien Complet
-                        </h1>
-                        <h2 class="text-white">Des <span class="text-secondary">espaces impeccables</span>, un service sans compromis</h2>
-                        <p class="text-white mb-5">
-                            Des interventions rigoureuses pour garantir propreté, confort et sécurité dans tous vos environnements
-                        </p>
-                        <div class="d-flex gap-3 flex-wrap justify-content-center">
-                            <a href="#contact" class="btn btn-light btn-lg btn-shadow fw-semibold px-5 py-3">
-                                Demander un Devis
-                            </a>
-                            <a href="#services" class="btn btn-outline-light btn-lg btn-service fw-semibold px-5 py-3">
-                                Nos Services
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="carousel-image slide_2"></div>
-                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center animate-fadeInUp">
-                        <h1 class="display-3 fw-bold text-white mb-4 text-center ">
-                            Services sur mesure pour <br> Entreprises & Particuliers
-                        </h1>
-                        <h2 class="text-white">Une <span class="text-secondary">équipe experte</span> pour tous vos besoins de nettoyage</h2>
-                        <p class="text-white mb-5">
-                            Techniciens formés, méthodes maîtrisées et résultats constants, adaptés à chaque type de bâtiment ou installation.
-                        </p>
-                        <div class="d-flex gap-3 flex-wrap justify-content-center">
-                            <a href="#contact" class="btn btn-light btn-lg btn-shadow fw-semibold px-5 py-3">
-                                Demander un Devis
-                            </a>
-                            <a href="#services" class="btn btn-outline-light btn-lg btn-service fw-semibold px-5 py-3">
-                                Nos Services
-                            </a>
-                        </div>
-                    </div>
+    <!-- ════════════════════════ HERO ════════════════════════ -->
+    <section id="accueil">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1592766491773-56e75cfb5c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1920&q=80" alt="Infrastructure béton" />
+            <div class="hero-overlay"></div>
+            <div class="hero-overlay-bottom"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-accent-bar"></div>
+        </div>
+        <div class="container hero-content">
+            <div style="max-width:700px;">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Industrie du Béton — Cameroun
                 </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <div class="carousel-image slide_3"></div>
-                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center animate-fadeInUp">
-                        <h1 class="display-3 fw-bold text-white mb-4 text-center">
-                            Spécial Aéronefs, Bateaux <br> & Environnements Sensibles
-                        </h1>
-                        <h2 class="text-white">Nettoyage des bateaux et <span class="text-secondary">traitements adaptés</span> au milieu marin</h2>
-                        <p class="text-white mb-5">
-                            Préservation de la coque, entretien des surfaces intérieures, élimination du sel et entretien complet avant ou après navigation.
-                        </p>
-                        <div class="d-flex gap-3 flex-wrap justify-content-center">
-                            <a href="#contact" class="btn btn-light btn-lg btn-shadow fw-semibold px-5 py-3">
-                                Demander un Devis
-                            </a>
-                            <a href="#services" class="btn btn-outline-light btn-lg btn-service fw-semibold px-5 py-3">
-                                Nos Services
-                            </a>
-                        </div>
-                    </div>
+                <h1 class="hero-title">
+                    CAMEROON<br>
+                    <span>CONCRETES</span><br>
+                    POLES FACTORY
+                </h1>
+                <p class="hero-slogan">"Des solutions robustes pour des infrastructures durables"</p>
+                <p class="hero-desc">
+                    Leader dans la fabrication de poteaux précontraints et la production de béton prêt à l'emploi,
+                    CCPF construit les infrastructures de demain au Cameroun et en Afrique centrale.
+                </p>
+                <div class="d-flex flex-column flex-sm-row gap-3">
+                    <a href="#services" class="btn-hero-primary" onclick="smoothScroll('#services',event)">
+                        Nos services <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn-hero-secondary" onclick="smoothScroll('#contact',event)">
+                        Nous contacter
+                    </a>
                 </div>
             </div>
+        </div>
+        <button class="scroll-indicator" onclick="smoothScroll('#services')">
+            <span>Découvrir</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+    </section>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- ════════════════════════ STATS ════════════════════════ -->
+    <section id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+                    <div class="stat-label">Années d'expérience</div>
+                    <div class="stat-desc">Dans l'industrie du béton</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="5000" data-suffix="+">0+</div>
+                    <div class="stat-label">Poteaux produits</div>
+                    <div class="stat-desc">Par an</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="200" data-suffix="+">0+</div>
+                    <div class="stat-label">Projets réalisés</div>
+                    <div class="stat-desc">À travers le Cameroun</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98" data-suffix="%">0%</div>
+                    <div class="stat-label">Satisfaction client</div>
+                    <div class="stat-desc">Attestée par nos partenaires</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="service">
-        <div class="container-lg">
-            <div class="text-center mb-5 animate-fadeInUp">
-                <h2 class="display-4 fw-bold text-dark mb-3">Nos Services</h2>
-                <div class="section-divider"></div>
-                <p class="lead">
-                    GMV CLEANING assure des prestations de nettoyage spécialisées pour les aéronefs, les bateaux et autres nettoyages, en respectant les normes opérationnelles et les exigences de propreté propres à chaque secteur. Notre équipe met en œuvre des méthodes de travail structurées pour garantir des résultats uniformes, fiables et conformes aux standards professionnels.
-                    Nous proposons des solutions complètes et personnalisées pour tous vos besoins en nettoyage professionnel
+    <!-- ════════════════════════ SERVICES ════════════════════════ -->
+    <section id="services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag">Ce que nous faisons</div>
+                <h2 class="section-title">Nos Services</h2>
+                <p class="text-muted mx-auto" style="max-width:540px;font-size:.95rem;">
+                    Experts en béton précontraint et en travaux de génie civil, nous offrons des solutions intégrées pour toutes vos infrastructures.
                 </p>
             </div>
 
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1675176785665-8d6aef6b7d8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Poteaux précontraints" />
+                    <div class="service-img-overlay"></div>
+                    <div class="service-icon-badge" style="background:#0E4B7A;">
+                        <i class="bi bi-lightning-charge-fill text-white fs-5"></i>
+                    </div>
+                </div>
+                <div class="service-body">
+                    <div class="service-num" style="color:#0E4B7A;">Service 01</div>
+                    <h3 class="service-title">Fabrication de Poteaux Précontraints</h3>
+                    <p class="service-desc">Nos poteaux précontraints sont fabriqués selon les normes les plus strictes, garantissant une résistance optimale pour vos lignes électriques, téléphoniques et structures de soutien.</p>
+                    <ul class="service-features">
+                        <li style="--dot-color:#0E4B7A;"><span style="width:6px;height:6px;border-radius:50%;background:#0E4B7A;display:inline-block;flex-shrink:0;"></span>Poteaux basse et moyenne tension</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#0E4B7A;display:inline-block;flex-shrink:0;"></span>Poteaux de télécommunication</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#0E4B7A;display:inline-block;flex-shrink:0;"></span>Poteaux d'éclairage public</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#0E4B7A;display:inline-block;flex-shrink:0;"></span>Contrôle qualité rigoureux</li>
+                    </ul>
+                    <a href="#contact" class="btn-devis" style="color:#0E4B7A;" onclick="smoothScroll('#contact',event)">
+                        Demander un devis <span>&#8594;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card reverse">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1524177536702-14df4a2a0a71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Béton prêt à l'emploi" />
+                    <div class="service-img-overlay"></div>
+                    <div class="service-icon-badge" style="background:#6C757D;">
+                        <i class="bi bi-truck text-white fs-5"></i>
+                    </div>
+                </div>
+                <div class="service-body">
+                    <div class="service-num" style="color:#6C757D;">Service 02</div>
+                    <h3 class="service-title">Production de Béton Prêt à l'Emploi</h3>
+                    <p class="service-desc">CCPF produit un béton de haute qualité, formulé précisément pour chaque application. Livraison directe sur chantier avec des toupies modernes.</p>
+                    <ul class="service-features">
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#6C757D;display:inline-block;flex-shrink:0;"></span>Béton dosé et contrôlé</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#6C757D;display:inline-block;flex-shrink:0;"></span>Livraison rapide sur site</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#6C757D;display:inline-block;flex-shrink:0;"></span>Différentes résistances disponibles</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#6C757D;display:inline-block;flex-shrink:0;"></span>Formules adaptées aux projets</li>
+                    </ul>
+                    <a href="#contact" class="btn-devis" style="color:#6C757D;" onclick="smoothScroll('#contact',event)">
+                        Demander un devis <span>&#8594;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1647735282077-c12699af40be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Construction & Travaux publics" />
+                    <div class="service-img-overlay"></div>
+                    <div class="service-icon-badge" style="background:#F58220;">
+                        <i class="bi bi-hard-drive text-white fs-5"></i>
+                    </div>
+                </div>
+                <div class="service-body">
+                    <div class="service-num" style="color:#F58220;">Service 03</div>
+                    <h3 class="service-title">Construction &amp; Travaux Publics</h3>
+                    <p class="service-desc">De la conception à la réalisation, nos équipes expérimentées prennent en charge vos projets de construction et de travaux publics avec professionnalisme.</p>
+                    <ul class="service-features">
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#F58220;display:inline-block;flex-shrink:0;"></span>Routes et voiries</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#F58220;display:inline-block;flex-shrink:0;"></span>Ouvrages d'art</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#F58220;display:inline-block;flex-shrink:0;"></span>Réseaux d'assainissement</li>
+                        <li><span style="width:6px;height:6px;border-radius:50%;background:#F58220;display:inline-block;flex-shrink:0;"></span>Génie civil et bâtiment</li>
+                    </ul>
+                    <a href="#contact" class="btn-devis" style="color:#F58220;" onclick="smoothScroll('#contact',event)">
+                        Demander un devis <span>&#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════ ABOUT ════════════════════════ -->
+    <section id="apropos">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Mosaic images -->
+                <div class="col-lg-6">
+                    <div class="about-mosaic">
+                        <div>
+                            <div class="about-img-a">
+                                <img src="https://images.unsplash.com/photo-1652211955967-99c892925469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Équipe CCPF" />
+                            </div>
+                            <div class="about-img-b mt-3">
+                                <img src="https://images.unsplash.com/photo-1682924754699-dcf11b641343?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Infrastructure" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="about-img-c">
+                                <img src="https://images.unsplash.com/photo-1735494033514-47034e100d87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Usine" />
+                            </div>
+                            <div class="about-img-d mt-3">
+                                <img src="https://images.unsplash.com/photo-1509390726584-faaa21c8ac95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Poteaux électriques" />
+                            </div>
+                        </div>
+                        <div class="about-badge">
+                            <div class="about-badge-title">Depuis 2009</div>
+                            <div class="about-badge-sub">Au service du Cameroun</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content -->
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <div class="section-tag" style="justify-content:flex-start;">Qui sommes-nous</div>
+                    <h2 class="section-title">Bâtir la fierté<br><span style="color:var(--orange);">camerounaise</span></h2>
+                    <p class="text-muted mb-3" style="font-size:.93rem;line-height:1.7;">
+                        Fondée en 2009, CAMEROON CONCRETES POLES FACTORY (CCPF) s'est imposée comme le leader camerounais dans la fabrication de poteaux en béton précontraint. Implantée à Douala, notre entreprise combine savoir-faire local et technologie moderne.
+                    </p>
+                    <p class="text-muted mb-4" style="font-size:.93rem;line-height:1.7;">
+                        Notre mission : fournir des solutions béton de haute qualité qui contribuent au développement des infrastructures durables au Cameroun et dans la sous-région d'Afrique centrale.
+                    </p>
+                    <ul class="strengths-list">
+                        <li><i class="bi bi-check-circle-fill"></i>Certifiés aux normes internationales ISO</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Équipements de production de dernière génération</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Équipe de plus de 150 professionnels qualifiés</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Respect strict des délais de livraison</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Matières premières sélectionnées avec soin</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Présence dans toutes les régions du Cameroun</li>
+                    </ul>
+                    <button class="btn-blue" onclick="smoothScroll('#contact')">Travailler avec nous</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════ WHY US ════════════════════════ -->
+    <section id="pourquoi">
+        <div class="container position-relative">
+            <div class="text-center mb-5">
+                <div class="section-tag">Notre différence</div>
+                <h2 class="section-title white">Pourquoi choisir CCPF ?</h2>
+                <p style="color:rgba(255,255,255,0.6);max-width:540px;margin:0 auto;font-size:.93rem;">
+                    Nous ne livrons pas seulement du béton — nous bâtissons la confiance avec chaque projet réalisé.
+                </p>
+            </div>
             <div class="row g-4">
-                <!-- Service 1 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body">
-                            <div class="service-icon">
-                                <img src="{{ asset('images/avion.avif') }}" alt="" class="w-100">
-                            </div>
-                            <h5 class="card-title fw-bold text-dark mb-3">Nettoyage d’Aéronefs</h5>
-                            <p class="card-text text-dark mb-4">
-                                Nettoyage des zones sensibles et espaces passagers avec un souci constant de propreté et de sécurité.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Nettoyage des cabines</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Hygiénisation des sanitaires</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Nettoyage des zones cockpit</span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-shield-check"></i></div>
+                        <div class="why-title">Qualité Garantie</div>
+                        <div class="why-desc">Chaque produit est soumis à des tests rigoureux avant livraison, conformément aux normes NF et EN.</div>
                     </div>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body">
-                            <div class="service-icon">
-                                <img src="{{ asset('images/bateau.avif') }}" alt="" class="w-100">
-                            </div>
-                            <h5 class="card-title fw-bold text-dark mb-3">Nettoyage de Bateaux</h5>
-                            <p class="card-text text-dark mb-4">
-                                Entretien complet des bateaux, conçu pour préserver leur apparence, leur hygiène et leur longévité.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Aspiration et désinfection des cabines</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Lavage des surfaces intérieures</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Décrassage des zones techniques accessibles</span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-clock-history"></i></div>
+                        <div class="why-title">Délais Respectés</div>
+                        <div class="why-desc">Grâce à notre organisation industrielle, nous garantissons la livraison dans les délais convenus.</div>
                     </div>
                 </div>
-
-                <!-- Service 3 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body">
-                            <div class="service-icon">
-                                <img src="{{ asset('images/bureau.avif') }}" alt="" class="w-100">
-                            </div>
-                            <h5 class="card-title fw-bold text-dark mb-3">Nettoyage de Bureaux</h5>
-                            <p class="card-text text-dark mb-4">
-                                Entretien quotidien de vos espaces professionnels pour un environnement de travail optimal.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Nettoyage quotidien</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Désinfection</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Gestion des déchets</span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-wrench-adjustable"></i></div>
+                        <div class="why-title">Expertise Technique</div>
+                        <div class="why-desc">Nos ingénieurs et techniciens maîtrisent les dernières innovations du béton précontraint.</div>
                     </div>
                 </div>
-
-                <!-- Service 4 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body">
-                            <div class="service-icon">
-                                <img src="{{ asset('images/industriel.avif') }}" alt="" class="w-100">
-                            </div>
-                            <h5 class="card-title fw-bold text-dark mb-3">Entretien Industriel</h5>
-                            <p class="card-text text-dark mb-4">
-                                Solutions adaptées aux espaces industriels avec équipements spécialisés.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Nettoyage haute pression</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Dégraissage</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Maintenance préventive</span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-tree"></i></div>
+                        <div class="why-title">Éco-responsabilité</div>
+                        <div class="why-desc">Nous intégrons des pratiques durables pour minimiser notre impact environnemental.</div>
                     </div>
                 </div>
-
-                <!-- Service 5 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body">
-                            <div class="service-icon">
-                                <img src="{{ asset('images/residence.avif') }}" alt="" class="w-100">
-                            </div>
-                            <h5 class="card-title fw-bold text-dark mb-3">Nettoyage Résidentiel</h5>
-                            <p class="card-text text-dark mb-4">
-                                Services de nettoyage pour copropriétés et espaces communs.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Parties communes</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Vitrerie</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Espaces verts</span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-award"></i></div>
+                        <div class="why-title">Certifications</div>
+                        <div class="why-desc">CCPF est certifiée ISO 9001 et respecte toutes les normes locales et internationales.</div>
                     </div>
                 </div>
-
-               <!-- Service 6 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body">
-                            <div class="service-icon">
-                                <img src="{{ asset('images/facade.avif') }}" alt="" class="w-100">
-                            </div>
-                            <h5 class="card-title fw-bold text-dark mb-3">Vitrerie & Façades</h5>
-                            <p class="card-text text-dark mb-4">
-                                Nettoyage professionnel de vitres et façades en hauteur.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Vitres extérieures</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Façades</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <div class="service-puce"></div>
-                                    <span class="text-dark">Travaux en hauteur</span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="bi bi-people"></i></div>
+                        <div class="why-title">Service Client</div>
+                        <div class="why-desc">Un accompagnement personnalisé de la conception à la livraison et au-delà.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="apropos" class="py-5 bg-white">
-        <div class="container-lg">
-            <div class="row g-5 align-items-center">
-                <div class="col-12 col-lg-6 animate-fadeInLeft">
-                    <h2 class="display-4 fw-bold text-dark mb-3">À Propos de GMV CLEANING</h2>
-                    <div class="section-divider ms-0"></div>
-                    <p class="lead text-dark mb-4">
-                        Votre partenaire de confiance pour un nettoyage professionnel, rigoureux et sécurisé.
-                    </p>
-                    <p class="text-dark ">
-                        Nous assurons des prestations de nettoyage spécialisées pour les aéronefs, les bateaux et autres nettoyage, en respectant les normes opérationnelles et les exigences de propreté propres à chaque secteur. Notre équipe met en œuvre des méthodes de travail structurées pour garantir des résultats uniformes, fiables et conformes aux standards professionnels.
-                    </p>
-
-                    <p class="text-dark mb-4">
-                        Nous accompagnons nos partenaires dans l’amélioration continue de leurs opérations grâce à une prestation structurée, un suivi régulier et une disponibilité adaptée aux contraintes du terrain.
-                    </p>
-
-                    <div class="row g-3 mb-4">
-                        <div class="col-6">
-                            <div class="valeur">
-                                <h6 class="fw-bold text-dark mb-2">Rigueur</h6>
-                                <p class="text-dark mb-0">Nous accordons une grande importance à l’exécution précise des tâches confiées par nos partenaires.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="valeur">
-                                <h6 class="fw-bold text-dark mb-2">Fiabilité</h6>
-                                <p class="text-dark mb-0">Chaque prestation est réalisée selon des standards clairement définis, dans le respect stricte des délais.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="valeur">
-                                <h6 class="fw-bold text-dark mb-2">Discipline opérationnelle</h6>
-                                <p class="text-dark mb-0">Nous appliquons des méthodes structurées pour garantir une qualité constante dans nos interventions.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="valeur">
-                                <h6 class="fw-bold text-dark mb-2">Respect des environnements</h6>
-                                <p class="text-dark mb-0">Nous adaptons nos pratiques aux spécificités de nos clients, en utilisant des techniques compatibles.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-6 animate-fadeInRight">
-                    <div class="position-relative">
-                        <img src="https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Équipe GMV CLEANING" class="img-fluid rounded-4" style="box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);">
-                    </div>
-
-                    <div class="row g-3 mt-4">
-                        <div class="col-6">
-                            <div class="badge-stat">
-                                <i class="fa-solid fa-users fa-2x"></i>
-                                <div class="h4 fw-bold mb-0">500+</div>
-                                <small>Clients Satisfaits</small>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="badge-stat">
-                                <i class="fa-solid fa-user-check fa-2x"></i>
-                                <div class="h4 fw-bold mb-0">20+</div>
-                                <small>Agents certifiés</small>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="badge-stat">
-                                <i class="fa-solid fa-star fa-2xl"></i>
-                                <div class="h4 fw-bold mb-0">99%</div>
-                                <small>Taux de satisfaction</small>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="badge-stat">
-                                <i class="fa-regular fa-clock fa-2xl"></i>
-                                <div class="h4 fw-bold mb-0">24/7</div>
-                                <small>Disponibilité</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="temoignages" class="temoignage">
-        <div class="container-lg">
-            <div class="text-center mb-5 animate-fadeInUp">
-                <h2 class="display-4 fw-bold text-dark mb-3">Témoignages Clients</h2>
-                <div class="section-divider"></div>
-                <p class="lead text-dark">
-                    La satisfaction de nos clients est notre meilleure récompense
+    <!-- ════════════════════════ PROJECTS ════════════════════════ -->
+    <section id="projets">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag">Notre portfolio</div>
+                <h2 class="section-title">Projets Réalisés</h2>
+                <p class="text-muted mx-auto" style="max-width:540px;font-size:.95rem;">
+                    Découvrez quelques-uns de nos projets emblématiques à travers le Cameroun et la sous-région.
                 </p>
             </div>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1501696226977-1fbff6555a97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Réseau électrique Yaoundé" />
+                            <span class="project-year">2023</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-cat">Poteaux précontraints</div>
+                            <div class="project-name">Réseau électrique — Yaoundé Nord</div>
+                            <div class="project-loc"><i class="bi bi-geo-alt-fill"></i> Yaoundé, Cameroun</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1682924754698-9f0a3bcef68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Route nationale" />
+                            <span class="project-year">2023</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-cat">Travaux publics</div>
+                            <div class="project-name">Route nationale RN1 — Extension</div>
+                            <div class="project-loc"><i class="bi bi-geo-alt-fill"></i> Douala–Yaoundé</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1554972740-69c4faff3617?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Centrale hydroélectrique" />
+                            <span class="project-year">2022</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-cat">Génie civil</div>
+                            <div class="project-name">Centrale hydroélectrique</div>
+                            <div class="project-loc"><i class="bi bi-geo-alt-fill"></i> Adamaoua, Cameroun</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1587622054651-e3e62142c3e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Réseau télécom" />
+                            <span class="project-year">2022</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-cat">Poteaux télécom</div>
+                            <div class="project-name">Réseau télécom — MTN Cameroun</div>
+                            <div class="project-loc"><i class="bi bi-geo-alt-fill"></i> National</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1524177536702-14df4a2a0a71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Zone industrielle" />
+                            <span class="project-year">2021</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-cat">Béton prêt à l'emploi</div>
+                            <div class="project-name">Zone industrielle de Bassa</div>
+                            <div class="project-loc"><i class="bi bi-geo-alt-fill"></i> Douala, Cameroun</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1509390373685-579356742d95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Éclairage public Limbé" />
+                            <span class="project-year">2021</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-cat">Poteaux d'éclairage</div>
+                            <div class="project-name">Éclairage public — Limbé</div>
+                            <div class="project-loc"><i class="bi bi-geo-alt-fill"></i> Limbé, Cameroun</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ════════════════════════ TESTIMONIALS ════════════════════════ -->
+    <section id="temoignages">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag">Ils nous font confiance</div>
+                <h2 class="section-title">Témoignages</h2>
+                <p class="text-muted mx-auto" style="max-width:440px;font-size:.93rem;">
+                    La satisfaction de nos clients est notre plus grande récompense.
+                </p>
+            </div>
             <div class="row g-4 mb-5">
-                <!-- Testimonial 1 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="testimonial-card card-hover">
-                        <div class="quote-icon">
-                            <i class="fa-solid fa-quote-right fa-2x"></i>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-4 mt-3">
-                            <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Marie Dubois" class="testimonial-avatar">
-                            <div class="ms-3">
-                                <h6 class="fw-bold text-dark mb-0">Marie Dubois</h6>
-                                <small class="text-dark">Directrice Générale</small>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <div class="d-flex align-items-center gap-3 mb-1">
+                            <div class="testimonial-avatar">JM</div>
+                            <div>
+                                <div class="testimonial-name">Jean-Baptiste Mfoula</div>
+                                <div class="testimonial-role">Directeur Technique, AES-SONEL</div>
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        </div>
-
-                        <p class="text-dark fst-italic">
-                            "GMV CLEANING a transformé nos espaces de travail. Leur professionnalisme et leur attention aux détails sont remarquables. Une équipe fiable et efficace."
-                        </p>
+                        <p class="testimonial-text">"CCPF nous a fourni des poteaux de haute qualité dans des délais exceptionnels. Leur rigueur technique et leur réactivité font d'eux un partenaire incontournable."</p>
+                        <div class="stars">★★★★★</div>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="testimonial-card card-hover">
-                        <div class="quote-icon">
-                            <i class="fa-solid fa-quote-right fa-2x"></i>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-4 mt-3">
-                            <img src="https://images.pexels.com/photos/935969/pexels-photo-935969.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Jean-Pierre Njitap" class="testimonial-avatar">
-                            <div class="ms-3">
-                                <h6 class="fw-bold text-dark mb-0">Jean-Pierre Njitap</h6>
-                                <small class="text-dark">Responsable Maintenance</small>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <div class="d-flex align-items-center gap-3 mb-1">
+                            <div class="testimonial-avatar">PN</div>
+                            <div>
+                                <div class="testimonial-name">Mme Pauline Ngono</div>
+                                <div class="testimonial-role">Chef de projet, Mairie de Yaoundé</div>
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        </div>
-
-                        <p class="text-dark fst-italic">
-                            "Nous faisons une confiance totale à GMV CLEANING. Leur réactivité et la qualité constante de leurs services font toute la différence pour notre site industriel."
-                        </p>
+                        <p class="testimonial-text">"Le béton prêt à l'emploi de CCPF a été livré ponctuellement sur tous nos chantiers d'éclairage public. La qualité est irréprochable."</p>
+                        <div class="stars">★★★★★</div>
                     </div>
                 </div>
-
-                <!-- Testimonial 3 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="testimonial-card card-hover">
-                        <div class="quote-icon">
-                            <i class="fa-solid fa-quote-right fa-2x"></i>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-4 mt-3">
-                            <img src="https://images.pexels.com/photos/7552568/pexels-photo-7552568.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sophie Smith" class="testimonial-avatar">
-                            <div class="ms-3">
-                                <h6 class="fw-bold text-dark mb-0">Sophie Smith</h6>
-                                <small class="text-dark">Gestionnaire Immobilier</small>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <div class="d-flex align-items-center gap-3 mb-1">
+                            <div class="testimonial-avatar">SE</div>
+                            <div>
+                                <div class="testimonial-name">Ing. Samuel Essomba</div>
+                                <div class="testimonial-role">BET Infratech, Douala</div>
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        </div>
-
-                        <p class="text-dark fst-italic">
-                            "Un service irréprochable pour nos copropriétés. Les résidents sont enchantés de la propreté des parties communes. Je recommande vivement GMV CLEANING."
-                        </p>
+                        <p class="testimonial-text">"En tant qu'ingénieur, je recommande vivement CCPF. Leurs équipes sont compétentes, leurs produits conformes aux normes et leur service après-vente exemplaire."</p>
+                        <div class="stars">★★★★★</div>
                     </div>
                 </div>
             </div>
-
-            <div class="gradient-bg rounded-4 p-5 text-white text-center">
-                <h3 class="h2 fw-bold mb-3">Rejoignez nos clients satisfaits</h3>
-                <p class="lead mb-4">
-                    Plus de 500 entreprises nous font confiance pour leur nettoyage professionnel
-                </p>
-                <a href="#contact" class="btn btn-light btn-lg fw-semibold px-5 py-3" style="box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                    Demander un Devis Gratuit
-                </a>
+            <!-- Partners -->
+            <div class="text-center">
+                <p class="partners-label">Nos partenaires &amp; clients</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <span class="partner-badge">AES-SONEL</span>
+                    <span class="partner-badge">MTN Cameroun</span>
+                    <span class="partner-badge">Mairie de Yaoundé</span>
+                    <span class="partner-badge">MINTP</span>
+                    <span class="partner-badge">Orange Cameroun</span>
+                    <span class="partner-badge">CAMTEL</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container-lg">
-            <div class="text-center mb-5 animate-fadeInUp">
-                <h2 class="display-4 fw-bold text-dark mb-3">Contactez-Nous</h2>
-                <div class="section-divider"></div>
-                <p class="lead text-dark">
-                    Notre équipe est à votre écoute pour répondre à tous vos besoins
+    <!-- ════════════════════════ CONTACT ════════════════════════ -->
+    <section id="contact">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-tag">Parlons de votre projet</div>
+                <h2 class="section-title">Contactez-nous</h2>
+                <p class="text-muted mx-auto" style="max-width:440px;font-size:.93rem;">
+                    Un projet, un devis, une question ? Notre équipe est à votre écoute.
                 </p>
             </div>
-
             <div class="row g-5">
-                <div class="col-12 col-lg-5 animate-fadeInLeft">
-                    <div class="gradient-bg rounded-4 p-4 text-white mb-4">
-                        <h4 class="fw-bold mb-3">Demandez votre devis gratuit</h4>
-                        <p class="mb-0">
-                            Remplissez le formulaire et recevez une estimation personnalisée sous 24h.
-                        </p>
+                <!-- Info -->
+                <div class="col-lg-5">
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div>
+                            <div class="contact-info-label">Adresse</div>
+                            <div class="contact-info-value">Zone Industrielle de Bassa<br>Douala, Cameroun</div>
+                        </div>
                     </div>
-
-                    <div class="row g-3">
-                        <!-- Contact Info 1 -->
-                        <div class="col-6">
-                            <div class="card card-hover">
-                                <div class="card-body">
-                                    <div class="contact-icon">
-                                        <i class="fa-solid fa-phone-volume fa-2x"></i>
-                                    </div>
-                                    <h6 class="fw-bold text-dark mb-2">Téléphone</h6>
-                                    <small>
-                                        <a class="contact-link" href="tel:+971523071828">+ 971 523 071 828</a>
-                                    </small>
-                                    <small>
-                                        <a class="contact-link" href="tel:+237677700109">+ 237 677 700 109</a>
-                                    </small>
-                                </div>
-                            </div>
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <div class="contact-info-label">Téléphone</div>
+                            <div class="contact-info-value">+237 6XX XXX XXX<br>+237 2XX XXX XXX</div>
                         </div>
-
-                        <!-- Contact Info 2 -->
-                        <div class="col-6">
-                            <div class="card card-hover">
-                                <div class="card-body">
-                                    <div class="contact-icon">
-                                        <i class="fa-solid fa-envelope fa-2x"></i>
-                                    </div>
-                                    <h6 class="fw-bold text-dark mb-2">Email</h6>
-                                    <small>
-                                        <a class="contact-link" href="mailto:contact@gmvcleaning.com">contact@gmvcleaning.com</a>
-                                    </small>
-                                    <small>
-                                        <a class="contact-link" href="mailto:devis@gmvcleaning.com">devis@gmvcleaning.com</a>
-                                    </small>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                        <div>
+                            <div class="contact-info-label">Email</div>
+                            <div class="contact-info-value">contact@ccpf-cameroun.com<br>devis@ccpf-cameroun.com</div>
                         </div>
-
-                        <!-- Contact Info 3 -->
-                        <div class="col-6">
-                            <div class="card card-hover">
-                                <div class="card-body">
-                                    <div class="contact-icon">
-                                        <i class="fa-solid fa-location-dot fa-2x"></i>
-                                    </div>
-                                    <h6 class="fw-bold text-dark mb-2">Adresse</h6>
-                                    <small class="d-block text-dark">Yaoundé – Essos Marché</small>
-                                    <small class="d-block text-dark">B.P. : 3582 Yaoundé - Cameroun</small>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
+                        <div>
+                            <div class="contact-info-label">Horaires</div>
+                            <div class="contact-info-value">Lun–Ven : 07h30 – 17h30<br>Sam : 08h00 – 13h00</div>
                         </div>
-
-                        <!-- Contact Info 4 -->
-                        <div class="col-6">
-                            <div class="card card-hover">
-                                <div class="card-body">
-                                    <div class="contact-icon">
-                                        <i class="fa-regular fa-clock fa-2x"></i>
-                                    </div>
-                                    <h6 class="fw-bold text-dark mb-2">Horaires</h6>
-                                    <small class="d-block text-dark">Lun - Ven: 8h - 18h</small>
-                                    <small class="d-block text-dark">Sam: 9h - 12h</small>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="contact-map">
+                        <img src="https://images.unsplash.com/photo-1682924754765-75832404fd1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600&q=80" alt="Localisation" />
+                        <div class="contact-map-pin">
+                            <div class="contact-map-pill"><i class="bi bi-geo-alt-fill"></i> Douala, Cameroun</div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-lg-7 animate-fadeInRight">
-                    <form id="contactForm" class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" required
-                                           placeholder="Nom complet">
-                                    <label for="name" class="form-label">Nom complet</label>
+                <!-- Form -->
+                <div class="col-lg-7">
+                    <div id="formWrap">
+                        <form class="contact-form" onsubmit="submitForm(event)">
+                            <div class="row g-4 mb-4">
+                                <div class="col-sm-6">
+                                    <label class="form-label-custom">Nom complet <span class="required-star">*</span></label>
+                                    <input type="text" id="nom" class="form-control-custom" placeholder="Jean Dupont" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label-custom">Email <span class="required-star">*</span></label>
+                                    <input type="email" id="email" class="form-control-custom" placeholder="email@example.com" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label-custom">Téléphone</label>
+                                    <input type="tel" id="tel" class="form-control-custom" placeholder="+237 6XX XXX XXX" />
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label-custom">Service concerné</label>
+                                    <select id="service" class="form-control-custom">
+                                        <option value="">Choisir un service</option>
+                                        <option value="poteaux">Poteaux précontraints</option>
+                                        <option value="beton">Béton prêt à l'emploi</option>
+                                        <option value="travaux">Construction &amp; Travaux</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label-custom">Message <span class="required-star">*</span></label>
+                                    <textarea id="message" class="form-control-custom" rows="5" placeholder="Décrivez votre projet ou votre demande..." required style="resize:none;"></textarea>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" required placeholder="Email">
-                                    <label for="email" class="form-label">Email</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="company" placeholder="Entreprise">
-                                    <label for="company" class="form-label">Entreprise</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-floating">
-                                    <input type="tel" class="form-control" id="phone" placeholder="Téléphone">
-                                    <label for="phone" class="form-label">Téléphone</label>
-                                </div>
-                            </div>
-
-                        <div class="col-md-12 mb-5">
-                            {#                            <div class="form-floating"> #}
-                            <textarea class="form-control" id="message" rows="7"
-                                      placeholder="Décrivez votre projet ou vos besoins..."></textarea>
-                            <label for="message" class="form-label"></label>
-                            {#                            </div> #}
-                        </div>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary-gradient btn-lg w-100 fw-semibold d-flex align-items-center justify-content-center gap-2">
-                                <i class="fa fa-paper-plane"></i>
-                                Envoyer le message
+                            <button type="submit" class="btn-submit">
+                                <i class="bi bi-send-fill"></i> Envoyer le message
                             </button>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                    <div id="successBox" class="success-box d-none">
+                        <div class="success-icon"><i class="bi bi-check-circle-fill"></i></div>
+                        <div class="success-title">Message envoyé !</div>
+                        <p class="success-msg">Merci pour votre message. Notre équipe vous contactera dans les 24 heures ouvrables.</p>
+                        <button class="btn-reset" onclick="resetForm()">Envoyer un autre message</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>
-        {% block title %} GMV CLEANING - La propreté au service de la performance {% endblock %}
+        {% block title %} CAMEROON CONCRETES POLES FACTORY — CCPF {% endblock %}
     </title>
-    <meta name="description" content="GMV CLEANING - Votre partenaire de confiance pour un nettoyage professionnel, rigoureux et sécurisé.">
-    <meta name="keywords" content="GMV CLEANING">
-    <meta name="description" content="Votre partenaire de confiance pour un nettoyage professionnel, rigoureux et sécurisé">
+    <meta name="description" content="Des solutions robustes pour des infrastructures durables. Leader en fabrication de poteaux précontraints au Cameroun." />
+    <meta name="keywords" content="Fabrication de Poteaux Précontraints, Production de Béton Prêt à l'Emploi, Construction & Travaux Publics, Infrastructures Durables, CCPF Cameroun" />
+    <meta name="description" content="CCPF, Des solutions robustes pour des infrastructures durables">
     <meta name="author" content="Jambaar Corporation">
     <link href="{{ asset('images/favicon.ico') }}" rel="icon">
     <!-- Bootstrap CSS -->
@@ -22,135 +22,123 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="navbar">
-    <div class="container-lg">
-        <a class="navbar-brand" href="#accueil">
-            <div class="d-flex align-items-center gap-2">
-                <div class="logo-bg">
-                    <div class="logo-text">GMV</div>
-                </div>
+<nav id="navbar">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between py-3 py-md-0" style="min-height:72px;">
+
+            <!-- Logo -->
+            <a href="#accueil" class="d-flex align-items-center gap-2 text-decoration-none" onclick="smoothScroll('#accueil')">
+                <img src="https://hercules-cdn.com/file_m48wCIAl40FGkjH721lfuNxZ" alt="CCPF Logo"
+                     style="height:40px;width:40px;border-radius:4px;object-fit:contain;background:#fff;padding:3px;" />
                 <div>
-                    <div class="brand">GMV CLEANING</div>
-                    <div class="slogan">Excellence & Propreté</div>
+                    <div class="navbar-brand-name">CCPF</div>
+                    <div class="navbar-brand-sub d-none d-sm-block">Cameroon Concretes Poles Factory</div>
                 </div>
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="d-none d-md-flex align-items-center gap-1">
+                <a href="#accueil" class="nav-link active" onclick="setActive(this,'#accueil')">Accueil</a>
+                <a href="#services" class="nav-link" onclick="setActive(this,'#services')">Services</a>
+                <a href="#apropos" class="nav-link" onclick="setActive(this,'#apropos')">À propos</a>
+                <a href="#projets" class="nav-link" onclick="setActive(this,'#projets')">Projets</a>
+                <a href="#contact" class="nav-link" onclick="setActive(this,'#contact')">Contact</a>
+            </nav>
+
+            <!-- CTA desktop + hamburger mobile -->
+            <div class="d-flex align-items-center gap-2">
+                <a href="tel:+237000000000" class="btn-call d-none d-md-inline-flex">
+                    <i class="bi bi-telephone-fill"></i> Nous appeler
+                </a>
+                <button class="navbar-toggler d-md-none" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
+                    <i class="bi bi-list" id="menuIcon"></i>
+                </button>
             </div>
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#accueil">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#apropos">A Propos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#temoignages">Témoignages</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="d-none">
+        <div class="container py-3">
+            <a href="#accueil" class="nav-link d-block" onclick="mobileNav('#accueil')">Accueil</a>
+            <a href="#services" class="nav-link d-block" onclick="mobileNav('#services')">Services</a>
+            <a href="#apropos" class="nav-link d-block" onclick="mobileNav('#apropos')">À propos</a>
+            <a href="#projets" class="nav-link d-block" onclick="mobileNav('#projets')">Projets</a>
+            <a href="#contact" class="nav-link d-block" onclick="mobileNav('#contact')">Contact</a>
+            <a href="tel:+237000000000" class="btn-call w-100 justify-content-center mt-2">
+                <i class="bi bi-telephone-fill"></i> Nous appeler
+            </a>
         </div>
     </div>
 </nav>
 {% block body %}
 {% endblock %}
 <!-- Footer -->
-<footer class="footer">
-    <div class="container-lg">
-        <div class="row g-5 mb-5">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                    <div class="logo-bg">
-                        <div class="logo-text">GMV</div>
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Brand -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="https://hercules-cdn.com/file_m48wCIAl40FGkjH721lfuNxZ" alt="CCPF Logo"
+                             style="height:44px;width:44px;border-radius:4px;object-fit:contain;background:#fff;padding:4px;" />
+                        <div>
+                            <div class="footer-brand-name">CCPF</div>
+                            <div class="footer-brand-sub">Cameroon Concretes Poles Factory</div>
+                        </div>
                     </div>
-                    <div>
-                        <div class="brand text-white">GMV CLEANING</div>
-                        <div class="slogan">Excellence & Propreté</div>
+                    <p class="footer-slogan">"Des solutions robustes pour des infrastructures durables"</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="footer-social"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
-                <p class="text-white mb-4 pe-3">
-                    La propreté au service de la performance. Votre partenaire de confiance pour un nettoyage professionnel, rigoureux et sécurisé.
-                </p>
-                <div class="d-flex gap-2">
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-facebook fa-lg"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-x-twitter fa-lg"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-linkedin-in fa-lg"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa-brands fa-instagram fa-lg"></i>
-                    </a>
+
+                <!-- Services -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-heading">Services</div>
+                    <button class="footer-link" onclick="smoothScroll('#services')">Poteaux précontraints</button>
+                    <button class="footer-link" onclick="smoothScroll('#services')">Béton prêt à l'emploi</button>
+                    <button class="footer-link" onclick="smoothScroll('#services')">Construction &amp; Travaux publics</button>
                 </div>
-            </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-                <h6 class="fs-4 fw-bold text-white mb-4">Services</h6>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#services" class="footer-link">Nettoyage d’Aéronefs</a></li>
-                    <li class="mb-2"><a href="#services" class="footer-link">Nettoyage de Bateaux</a></li>
-                    <li class="mb-2"><a href="#services" class="footer-link">Nettoyage de Bureaux</a></li>
-                    <li class="mb-2"><a href="#services" class="footer-link">Entretien Industriel</a></li>
-                    <li class="mb-2"><a href="#services" class="footer-link">Nettoyage Résidentiel</a></li>
-                    <li class="mb-2"><a href="#services" class="footer-link">Vitrerie & Façades</a></li>
-                </ul>
-            </div>
+                <!-- Company -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-heading">Entreprise</div>
+                    <button class="footer-link" onclick="smoothScroll('#apropos')">À propos de CCPF</button>
+                    <button class="footer-link" onclick="smoothScroll('#apropos')">Notre équipe</button>
+                    <button class="footer-link" onclick="smoothScroll('#apropos')">Certifications</button>
+                    <button class="footer-link" onclick="smoothScroll('#contact')">Carrières</button>
+                </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-                <h6 class="fs-4 fw-bold text-white mb-4">Liens Rapides</h6>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#accueil" class="footer-link">Accueil</a></li>
-                    <li class="mb-2"><a href="#apropos" class="footer-link">À Propos</a></li>
-                    <li class="mb-2"><a href="#temoignages" class="footer-link">Témoignages</a></li>
-                    <li class="mb-2"><a href="#contact" class="footer-link">Contact</a></li>
-                    <li class="mb-2"><a href="#" class="footer-link">Mentions Légales</a></li>
-                </ul>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-3">
-                <h6 class="fs-4 fw-bold text-white mb-4">Contact</h6>
-                <ul class="list-unstyled">
-                    <li class="d-flex text-secondary gap-3 mb-3">
-                        <i class="fa-solid fa-location-dot fa-2x"></i>
-                        <span class="text-white">Yaoundé – Essos Marché<br>B.P. : 3582 Yaoundé - Cameroun</span>
-                    </li>
-                    <li class="d-block align-items-center gap-3 mb-3">
-                        <i class="text-secondary fa-solid fa-phone-volume fa-2x"></i>
-                            <a class="footer-link" href="tel:+971523071828">+ 971 523 071 828</a>
-                        <br>
-                            <a class="footer-link ms-5" href="tel:+237677700109">+ 237 677 700 109</a>
-                    </li>
-                    <li class="d-block align-items-center gap-3">
-                        <i class="text-secondary fa-solid fa-envelope fa-2x"></i>
-                        <a class="footer-link" href="mailto:contact@gmvcleaning.com">contact@gmvcleaning.com</a>
-                        <a class="footer-link ms-5" href="mailto:devis@gmvcleaning.com">devis@gmvcleaning.com</a>
-                    </li>
-                </ul>
+                <!-- Contact -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-heading">Contact</div>
+                    <div class="footer-contact-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Zone Industrielle de Bassa,<br>Douala, Cameroun</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <a href="tel:+237000000000">+237 6XX XXX XXX</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:contact@ccpf-cameroun.com">contact@ccpf-cameroun.com</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="container-fluid copyright p-0 mt-5 mb-0">
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="py-4 px-5 text-center text-md-start">
-                <p class="mb-0">&copy; 2024 GMV CLEANING. {{ "Tout droits réservés."|trans }}</p>
-            </div>
-            <div class="py-4 px-5 bg-secondary footer-shape position-relative text-center text-md-end">
-                <p class="mb-0 designed">
-                    Designed By
-                    <a class="fw-bold text-primary" href="http://euclideservices.com" target="_blank">Jambaar Corporation</a>
-                </p>
-            </div>
+    <div class="footer-bottom">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <p class="footer-copy mb-0" id="footerYear">
+                © 2025 Cameroon Concretes Poles Factory (CCPF). Tous droits réservés.
+            </p>
+            <button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                <i class="bi bi-arrow-up"></i>
+            </button>
         </div>
     </div>
 </footer>

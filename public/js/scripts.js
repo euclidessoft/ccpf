@@ -1,3 +1,82 @@
+// ── Dynamic year ──
+document.getElementById('footerYear').innerHTML =
+    '© ' + new Date().getFullYear() + ' Cameroon Concretes Poles Factory (CCPF). Tous droits réservés.';
+
+// ── Smooth scroll ──
+function smoothScroll(selector, e) {
+    if (e) e.preventDefault();
+    const el = document.querySelector(selector);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ── Navbar scroll effect ──
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// ── Active nav link ──
+function setActive(el, href) {
+    document.querySelectorAll('#navbar .nav-link').forEach(l => l.classList.remove('active'));
+    el.classList.add('active');
+    smoothScroll(href);
+}
+
+// ── Mobile menu ──
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const icon = document.getElementById('menuIcon');
+    const open = menu.classList.toggle('d-none');
+    icon.className = open ? 'bi bi-list' : 'bi bi-x-lg';
+}
+function mobileNav(href) {
+    document.getElementById('mobileMenu').classList.add('d-none');
+    document.getElementById('menuIcon').className = 'bi bi-list';
+    smoothScroll(href);
+}
+
+// ── Animated counters ──
+function animateCounters() {
+    document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix;
+        let current = 0;
+        const steps = 50;
+        const increment = target / steps;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                el.textContent = target.toLocaleString('fr-FR') + suffix;
+                clearInterval(timer);
+            } else {
+                el.textContent = Math.floor(current).toLocaleString('fr-FR') + suffix;
+            }
+        }, 30);
+    });
+}
+// Trigger when stats section enters viewport
+const statsSection = document.getElementById('stats');
+let statsAnimated = false;
+const statsObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !statsAnimated) {
+        statsAnimated = true;
+        animateCounters();
+    }
+}, { threshold: 0.3 });
+statsObserver.observe(statsSection);
+
+// ── Contact form ──
+function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('formWrap').classList.add('d-none');
+    document.getElementById('successBox').classList.remove('d-none');
+}
+function resetForm() {
+    document.getElementById('formWrap').classList.remove('d-none');
+    document.getElementById('successBox').classList.add('d-none');
+    document.querySelector('.contact-form').reset();
+}
+
 // GMV Engineering - Enhanced JavaScript Interactions
 document.addEventListener('DOMContentLoaded', function() {
 
