@@ -131,4 +131,8 @@
     }
     window.addEventListener('scroll', updateActiveLink);
     updateActiveLink();
+
+    // ── Dynamic year ──
+    document.getElementById('footerYear').innerHTML =
+        new Date().getFullYear();
 })();
