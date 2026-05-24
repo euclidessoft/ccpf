@@ -55,12 +55,12 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 h-100">
                     <div class="about-img-grid">
-                        <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                        <img src="{{ asset('images/about.jpg') }}?auto=compress"
                              alt="Usine CCPF" class="about-img-main reveal">
-                        <img src="{{ asset('images/logo.jpg') }}?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                        <img src="{{ asset('images/logo.jpg') }}?auto=compress"
                              alt="Béton" class="about-img-secondary reveal" style="animation-delay:0.2s">
                         <div class="about-badge-floating">
-                            <span class="badge-number">15+</span>
+                            <span class="badge-number">5+</span>
                             <span class="badge-label">Années</span>
                             <br>
                             <span class="badge-label">d'expertise</span>
@@ -132,7 +132,7 @@
             <!-- Service 1 -->
             <div class="service-card">
                 <div class="service-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1675176785665-8d6aef6b7d8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80"
+                    <img src="{{ asset('images/service_1.jpg') }}?auto=compress"
                          alt="Poteaux précontraints"/>
                     <div class="service-img-overlay"></div>
                     <div class="service-icon-badge" style="background:#0E4B7A;">
@@ -140,7 +140,7 @@
                     </div>
                 </div>
                 <div class="service-body">
-                    <div class="service-num" style="color:#0E4B7A;">Service 01</div>
+                    <div class="service-num text-accent">Service 01</div>
                     <h3 class="service-title">Fabrication de Poteaux Précontraints</h3>
                     <p class="service-desc">Nous fabriquons des poteaux en béton précontraint conçus pour répondre aux
                         besoins des infrastructures modernes. Nos poteaux précontraints sont fabriqués selon les normes
@@ -168,8 +168,7 @@
                             Contrôle qualité rigoureux
                         </li>
                     </ul>
-                    <a href="#contact" class="btn-devis" style="color:#0E4B7A;"
-                       onclick="smoothScroll('#contact',event)">
+                    <a href="#contact" class="btn-devis text-accent" onclick="smoothScroll('#contact',event)">
                         Demander un devis <span>&#8594;</span>
                     </a>
                 </div>
@@ -178,7 +177,7 @@
             <!-- Service 2 -->
             <div class="service-card reverse">
                 <div class="service-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1524177536702-14df4a2a0a71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80"
+                    <img src="{{ asset('images/service_2.jpg') }}?auto=compress"
                          alt="Béton prêt à l'emploi"/>
                     <div class="service-img-overlay"></div>
                     <div class="service-icon-badge" style="background:#6C757D;">
@@ -186,7 +185,7 @@
                     </div>
                 </div>
                 <div class="service-body">
-                    <div class="service-num" style="color:#6C757D;">Service 02</div>
+                    <div class="service-num text-accent">Service 02</div>
                     <h3 class="service-title">Production de Béton Prêt à l'Emploi</h3>
                     <p class="service-desc">CCPF produit un béton de haute qualité, formulé précisément pour chaque
                         application. Livraison directe sur chantier avec des toupies modernes.</p>
@@ -208,8 +207,7 @@
                             adaptées aux projets
                         </li>
                     </ul>
-                    <a href="#contact" class="btn-devis" style="color:#6C757D;"
-                       onclick="smoothScroll('#contact',event)">
+                    <a href="#contact" class="btn-devis text-accent" onclick="smoothScroll('#contact',event)">
                         Demander un devis <span>&#8594;</span>
                     </a>
                 </div>
@@ -218,7 +216,7 @@
             <!-- Service 3 -->
             <div class="service-card">
                 <div class="service-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1647735282077-c12699af40be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80"
+                    <img src="{{ asset('images/service_3.jpg') }}?auto=compress"
                          alt="Construction & Travaux publics"/>
                     <div class="service-img-overlay"></div>
                     <div class="service-icon-badge" style="background:#F58220;">
@@ -226,7 +224,7 @@
                     </div>
                 </div>
                 <div class="service-body">
-                    <div class="service-num" style="color:#F58220;">Service 03</div>
+                    <div class="service-num text-accent">Service 03</div>
                     <h3 class="service-title">Construction &amp; Travaux Publics</h3>
                     <p class="service-desc">De la conception à la réalisation, nos équipes expérimentées prennent en
                         charge
@@ -249,8 +247,7 @@
                             civil et bâtiment
                         </li>
                     </ul>
-                    <a href="#contact" class="btn-devis" style="color:#F58220;"
-                       onclick="smoothScroll('#contact',event)">
+                    <a href="#contact" class="btn-devis text-accent" onclick="smoothScroll('#contact',event)">
                         Demander un devis <span>&#8594;</span>
                     </a>
                 </div>
@@ -419,49 +416,64 @@
                 <div class="section-tag mx-auto reveal">Nos Réalisations</div>
                 <h2 class="section-title reveal">Projets emblématiques</h2>
                 <div class="section-divider mx-auto"></div>
-                <p class="section-subtitle reveal">Quelques-unes de nos réalisations à travers le Cameroun</p></div>
+                <p class="section-subtitle reveal">Quelques-unes de nos réalisations</p>
+            </div>
             <div class="row g-3">
                 <div class="col-lg-6 reveal">
-                    <div class="project-card project-card--large"><img
-                                src="https://images.pexels.com/photos/236698/pexels-photo-236698.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop"
+                    <div class="project-card project-card--large">
+                        <img
+                                src="https://images.pexels.com/photos/14665623/pexels-photo-14665623.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop"
                                 alt="Électrification">
-                        <div class="project-overlay"><span class="project-cat">Électrification rurale</span><h4>Réseau
-                                d'électrification – Région du Centre</h4>
-                            <p>Fourniture de 2 400 poteaux précontraints pour l'extension du réseau électrique.</p><a
-                                    href="#contact" class="project-link">Voir le projet <i
-                                        class="bi bi-arrow-up-right"></i></a>
+                        <div class="project-overlay">
+                            <span class="project-cat">Électrification rurale</span>
+                            <h4>Réseau d'électrification</h4>
+                            <p>Fourniture de 2 400 poteaux précontraints pour l'extension du réseau électrique.</p>
+                            {#<a href="#contact" class="project-link">Voir le projet
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>#}
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="row g-3 h-100">
                         <div class="col-12 reveal">
-                            <div class="project-card"><img
-                                        src="https://images.pexels.com/photos/1137447/pexels-photo-1137447.jpeg?auto=compress&cs=tinysrgb&w=900&h=400&fit=crop"
+                            <div class="project-card">
+                                <img
+                                        src="https://images.unsplash.com/photo-1486673748761-a8d18475c757?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=compress&cs=tinysrgb&w=900&h=400&fit=crop"
                                         alt="Voirie">
-                                <div class="project-overlay"><span class="project-cat">Travaux publics</span><h4>
-                                        Aménagement
-                                        voirie – Douala</h4><a href="#contact" class="project-link">Voir le projet <i
-                                                class="bi bi-arrow-up-right"></i></a></div>
+                                <div class="project-overlay">
+                                    <span class="project-cat">Travaux publics</span>
+                                    <h4>Aménagement voirie</h4>
+                                    {#<a href="#contact" class="project-link">Voir le projet
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>#}
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-6 reveal">
-                            <div class="project-card"><img
-                                        src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop"
+                            <div class="project-card">
+                                <img
+                                        src="https://images.pexels.com/photos/236698/pexels-photo-236698.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop"
                                         alt="Entrepôt">
-                                <div class="project-overlay"><span class="project-cat">Construction</span><h4>Entrepôt
-                                        industriel – Yaoundé</h4><a href="#contact" class="project-link">Voir <i
-                                                class="bi bi-arrow-up-right"></i></a></div>
+                                <div class="project-overlay">
+                                    <span class="project-cat">Construction</span>
+                                    <h4>Entrepôt industriel</h4>
+                                    {#<a href="#contact" class="project-link">Voir
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>#}
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-6 reveal">
                             <div class="project-card"><img
-                                        src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop"
+                                        src="https://images.pexels.com/photos/32767676/pexels-photo-32767676.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop"
                                         alt="Pont">
-                                <div class="project-overlay"><span class="project-cat">Génie civil</span><h4>Pont sur
-                                        cours
-                                        d'eau – Littoral</h4><a href="#contact" class="project-link">Voir <i
-                                                class="bi bi-arrow-up-right"></i></a></div>
+                                <div class="project-overlay"><span class="project-cat">Génie civil</span>
+                                    <h4>Pont sur cours d'eau</h4>
+                                    {#<a href="#contact" class="project-link">Voir
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>#}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -482,8 +494,8 @@
                 </div>
             </div>
             <div class="row g-4 text-center">
-                <div class="col-6 col-lg-3 reveal" style="animation-delay:0.1s">
-                    <div class="stat-item"><span class="stat-num" data-target="15">0</span><span
+                <div class="col-6 col-lg-3 reveal" style="animation-delay:0.5s">
+                    <div class="stat-item"><span class="stat-num" data-target="5">0</span><span
                                 class="stat-plus">+</span>
                         <div class="stat-label">Années d'expérience</div>
                     </div>
@@ -529,7 +541,7 @@
                             produits dépasse nos attentes et les équipes sont très professionnelles."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">JN</div>
-                            <div><h6>Jean-Paul Nkomo</h6><span>Directeur technique, AES-SONEL</span></div>
+                            <div><h6>Jean-Paul Nkomo</h6><span>Directeur technique</span></div>
                         </div>
                     </div>
                 </div>
@@ -545,7 +557,7 @@
                             chantier."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">MF</div>
-                            <div><h6>Marie-Claire Fotso</h6><span>Chef de projet, Sogea-Satom</span></div>
+                            <div><h6>Marie-Claire Fotso</h6><span>Chef de projet</span></div>
                         </div>
                     </div>
                 </div>
@@ -559,7 +571,7 @@
                             d'infrastructures routières avec un niveau d'exigence qui correspond à nos standards."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">BT</div>
-                            <div><h6>Bernard Tchouangang</h6><span>Ingénieur, Ministère des TP</span></div>
+                            <div><h6>Bernard Tchouangang</h6><span>Ingénieur</span></div>
                         </div>
                     </div>
                 </div>
@@ -660,8 +672,8 @@
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="name" required
-                                               placeholder="Nom complet">
-                                        <label for="name" class="form-label">Nom complet</label>
+                                               placeholder="Nom complet *">
+                                        <label for="name" class="form-label">Nom complet *</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -673,15 +685,15 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" placeholder="Téléphone">
-                                        <label for="phone" class="form-label">Téléphone</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Téléphone *">
+                                        <label for="phone" class="form-label">Téléphone *</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control" id="email" required
-                                               placeholder="Email">
-                                        <label for="email" class="form-label">Email</label>
+                                               placeholder="Email *">
+                                        <label for="email" class="form-label">Email *</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -697,7 +709,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <textarea id="text" class="form-control" rows="5" required placeholder="Décrivez votre projet, les quantités, le calendrier...">
+                                    <textarea id="text" class="form-control" rows="5" placeholder="Décrivez votre projet, les quantités, le calendrier..." required>
                                     </textarea>
                                     <label for="text" class="form-label"></label>
                                 </div>
