@@ -421,6 +421,10 @@ img {
     z-index: 2;
 }
 
+.btn-hero {
+    width: 240px;
+}
+
 .scroll-dot {
     width: 24px;
     height: 40px;
@@ -705,7 +709,7 @@ img {
 .service-img-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
 }
 
 .service-icon-badge {
