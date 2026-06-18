@@ -347,15 +347,15 @@ img {
 }
 
 .hero-slide.slide_1 {
-    background-image: url('../images/image_1.jpg');
+    background-image: url('../images/slide_1.avif');
 }
 
 .hero-slide.slide_2 {
-    background-image: url('../images/image_2.jpg');
+    background-image: url('../images/slide_2.avif');
 }
 
 .hero-slide.slide_3 {
-    background-image: url('../images/image_3.jpg');
+    background-image: url('../images/slide_3.avif');
 }
 
 .hero-slide.active {
@@ -721,6 +721,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--orange);
+    color: var(--blue-dark) !important;
 }
 
 .service-body {
@@ -781,6 +783,8 @@ img {
     width: 6px;
     height: 6px;
     border-radius: 50%;
+    background: #F58220;
+    display: inline-block;
     flex-shrink: 0;
 }
 
